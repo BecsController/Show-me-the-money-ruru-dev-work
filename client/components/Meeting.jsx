@@ -88,7 +88,7 @@ class Meeting extends React.Component {
     },0 )
     return (
       <div className="container">
-        <h2 className="title is-2">{inProgress ? 'Meeting In Progress' : 'Start Meeting'}</h2>
+        <h2 style={{marginTop: '2vw'}} className="title is-2">{inProgress ? 'Meeting In Progress' : 'Start Meeting'}</h2>
         <div className="columns">
           <div className="column is-6">
           <h1 className="title is-2">Attendees</h1>
