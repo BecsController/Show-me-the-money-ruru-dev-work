@@ -29,13 +29,13 @@ class AddAttendee extends React.Component {
     this.setState({...initialState})
   }
 
-  componentWillReceiveProps (nextProps) {    
+  componentWillReceiveProps (nextProps) {
     this.setState ({
       users: nextProps.users
     })
   }
 
-  render() {    
+  render() {
     return(
       <div>
         <div className="dropdown is-hoverable">
@@ -50,7 +50,7 @@ class AddAttendee extends React.Component {
           <div className="dropdown-menu" id="dropdown-menu" role="menu">
             <div className="dropdown-content">
               {this.state.users.map(user => {
-                return <div className="dropdown-item" onClick={() => this.props.addAttendee(user)}>{user.first_name}{user.last_name}</div>
+                return <div key={user.first_name} className="dropdown-item" onClick={() => this.props.addAttendee(user)}>{user.first_name}{user.last_name}</div>
               })}
             </div>
           </div>
